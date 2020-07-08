@@ -7,6 +7,10 @@ class User(models.Model):
 
     def __str__(self):
         return self.real_name
+        
+    @property
+    def activity_periods(self):
+        return self.activityperiod_set.all()
 
 class ActivityPeriod(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, default='DEFAULT VALUE')
