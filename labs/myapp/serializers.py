@@ -13,12 +13,6 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = [ 
-            "id",
-            "real_name",
-            "tz",
-            "activity_periods"
-        ]
-
+        fields = '__all__'
 
 
