@@ -1,7 +1,8 @@
 from rest_framework import routers
-from .api import UserViewSet
+from .api import UserViewSet, ActivityPeriodViewSet
 
 router = routers.DefaultRouter()
-router.register('api/myapp', UserViewSet, 'myapp')
+router.register('api/user', UserViewSet, 'user')
+router.register('api/activity', ActivityPeriodViewSet, 'activity')
 
 urlpatterns = router.urls
