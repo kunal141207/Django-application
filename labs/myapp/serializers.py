@@ -13,12 +13,19 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
+        fields = '__all__'
+        
+#Results serializer
+class ResultSerializer(serializers.ModelSerializer):
+    activity_periods = ActivityPeriodSerializer(many=True)
+
+    class Meta:
+        model = User
         fields = [ 
             "id",
             "real_name",
             "tz",
             "activity_periods"
         ]
-
 
 
