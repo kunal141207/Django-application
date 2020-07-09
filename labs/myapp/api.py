@@ -9,3 +9,11 @@ class UserViewSet(viewsets.ModelViewSet):
         permissions.AllowAny
     ]
     serializer_class = UserSerializer
+
+#Activity viewset
+class ActivityViewSet(viewsets.ModelViewSet):
+    queryset = ActivityPeriod.objects.all()
+    permission_classes = [
+        permissions.AllowAny
+    ]
+    serializer_class = ActivityPeriodSerializer
